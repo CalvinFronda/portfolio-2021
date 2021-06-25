@@ -1,0 +1,33 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Titillium Web', sans-serif;
+}
+body {
+    color: #ffffff;
+    background-color: #2e2e35;
+}
+
+.section {
+    @media screen and (max-width: 600px) {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.navlinks {
+    display: inline;
+    @media screen and (max-width: 600px) {
+        margin: 0 1em 0 0;
+    }
+
+    margin: 0 4em 0 0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 27px;
+}
