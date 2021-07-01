@@ -76,8 +76,8 @@ const ContactFrom = () => {
     return (
         <Grid container direction="row" spacing={4} className={classes.root}>
             <Typography className={classes.contactFormText}>
-                If you wanted to chat about some of my work or if you had a
-                project that you think I would be interested in send me a
+                If you want to chat about some of my work or if you have a
+                project that you think I would be interested in, send me a
                 message! I'll be sure to get back as soon as possible
             </Typography>
             <form className={classes.formStyles} onSubmit={handleFormSubmit}>

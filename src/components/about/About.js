@@ -46,15 +46,15 @@ const About = () => {
                     I am a frontend web developer with expert knowledge of
                     React, Javascript, HTML and CSS. I love structure and
                     following best practices when it comes to coding. I excel in
-                    team enviroments from my years working in retail and
+                    team environments from my years working in retail and
                     customer service. Currently looking for a full time position
                     as a frontend web developer.
                 </Typography>
                 <Typography className={classes.bottomText}>
                     Things I like to do outside of coding?
-                    {<br />}I love the outdoors, so going on hikes, playing
-                    sports like basketball or tennis, baking some delicious
-                    breads and playing video games.
+                    <br />I love the outdoors, so going on hikes, playing sports
+                    like basketball or tennis, baking some delicious bread and
+                    playing video games.
                 </Typography>
             </Grid>
         </Grid>

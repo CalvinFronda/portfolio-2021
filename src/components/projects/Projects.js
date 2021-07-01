@@ -29,7 +29,7 @@ const projectList = [
         techUsed: ['React', 'Material-UI', 'GraphQL', 'Redux'],
         description: [
             'Built with React functional components, Redux state management and GraphQL.',
-            'Modern adminstrative portal to easily manage students, instructors and receptionist.',
+            'Modern administrative portal to easily manage students, instructors and receptionists.',
             'Integration with google classroom to easily onboard existing courses.',
         ],
         liveSite: 'https://www.getomou.com/',
@@ -39,7 +39,7 @@ const projectList = [
         image: githubFinder,
         techUsed: ['React', 'Custom Components', 'Netlify', 'Github API'],
         description: [
-            'React app that consumes the Github API to fetch profile data on searched user.',
+            'React app that consumes the Github API to fetch profile data on searched users.',
             'Responsive design with custom css breakpoints and properties.',
             'Utilizes React context to handle application state and actions.',
         ],
@@ -52,8 +52,8 @@ const projectList = [
         techUsed: ['React', 'Material-UI', 'AWS s3', 'Strapi'],
         description: [
             'Responsive hobby website to display different types of baked goods.',
-            'Uses Strapi, an open sources node.js CMS to handle uploading and managing content.',
-            'Images hosting on AWS s3 and served through AWS cloudfront as the CDN.',
+            'Uses Strapi, an open source node.js CMS to handle uploading and managing content.',
+            'Images stored on AWS s3 and served through AWS cloudfront as the CDN.',
         ],
         github: 'https://github.com/CalvinFronda/tcbakery',
         liveSite: 'https://www.wemakebread.com/',
