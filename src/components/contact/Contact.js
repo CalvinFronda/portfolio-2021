@@ -1,9 +1,10 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Box } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import ContactFrom from './ContactForm';
 const useStyles = makeStyles({
     root: {
+        marginTop: '72px',
         marginBottom: '72px',
     },
     heading: {
@@ -14,13 +15,7 @@ const useStyles = makeStyles({
     },
     link: {
         marginBottom: '5em',
-    },
-    box: {
-        display: 'flex',
-        justifyContent: 'center',
-        height: 640,
-        marginBottom: '20px',
-        backgroundColor: '#443F3F',
+        fontSize: '27px',
     },
 });
 

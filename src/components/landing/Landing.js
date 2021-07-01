@@ -4,7 +4,7 @@ import { Grid } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        fontSize: '42px',
+        fontSize: 'calc(30px + 1vw)',
         paddingTop: '72px',
         paddingBottom: '72px',
     },

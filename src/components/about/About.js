@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Box, Typography } from '@material-ui/core';
-
+import { Grid, Typography } from '@material-ui/core';
+import professionalPicture from '../../assets/images/professionalPicture.jpg';
 const useStyles = makeStyles({
     root: {
         paddingTop: '72px',
@@ -10,12 +10,11 @@ const useStyles = makeStyles({
     heading: {
         fontSize: '42px',
     },
-    box: {
+    profilePic: {
         display: 'flex',
         justifyContent: 'center',
-        height: 568,
-        marginBottom: '20px',
-        backgroundColor: '#443F3F',
+        maxHeight: 568,
+        borderRadius: '50%',
     },
     topText: {
         fontWeight: 'bold',
@@ -36,7 +35,11 @@ const About = () => {
                 About me
             </Grid>
             <Grid item xs={12} md={6}>
-                <Box className={classes.box}></Box>
+                <img
+                    className={classes.profilePic}
+                    src={professionalPicture}
+                    alt="personal"
+                />
             </Grid>
             <Grid item xs={12} md={6}>
                 <Typography className={classes.topText}>

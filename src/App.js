@@ -1,38 +1,104 @@
 import './App.scss';
 
 import { makeStyles } from '@material-ui/core/styles';
-import Header from './components/header/Header';
+import { Grid } from '@material-ui/core';
+
 import Landing from './components/landing/Landing';
 import Projects from './components/projects/Projects';
 import About from './components/about/About';
 import Contact from './components/contact/Contact';
-
-const useStyles = makeStyles({
+import Footer from './components/footer/Footer';
+import { Link } from 'react-scroll';
+import ScrollToTop from './components/ScrollToTop';
+const useStyles = makeStyles((theme) => ({
     root: {
-        width: '100%',
+        display: 'flex',
+        alignItems: 'center',
+        marginTop: '72px',
+        marginBottom: '72px',
     },
-    section: {
-        marginLeft: '15%',
-        marginRight: '15%',
+    menuButton: {
+        marginRight: theme.spacing(1),
     },
-    spacing: {
-        marginTop: '140px',
-        marginBottom: '140px',
+
+    logo: {
+        fontSize: '35px',
+        fontWeight: 'bold',
     },
-});
+    navList: {
+        listStyleType: 'none',
+        textAlign: 'center',
+    },
+}));
 
 function App() {
     const classes = useStyles();
 
     return (
         <div className="section">
-            <Header />
+            <Grid
+                container
+                direction="row"
+                alignContent="center"
+                className={classes.root}
+            >
+                <Grid item xs={1} className={classes.logo}>
+                    CF.
+                </Grid>
+                <Grid item xs={12} md={11} className={classes.navigation}>
+                    <ul className={classes.navList}>
+                        <li className="navlinks">
+                            <Link
+                                activeClass="active"
+                                to="projects"
+                                smooth={true}
+                                offset={50}
+                                duration={500}
+                                delay={100}
+                            >
+                                Projects
+                            </Link>
+                        </li>
+                        <li className="navlinks">
+                            <Link
+                                activeClass="active"
+                                to="about"
+                                smooth={true}
+                                offset={50}
+                                duration={700}
+                                delay={100}
+                            >
+                                About
+                            </Link>
+                        </li>
+                        <li className="navlinks">
+                            <Link
+                                activeClass="active"
+                                to="contact"
+                                smooth={true}
+                                offset={50}
+                                duration={900}
+                                delay={100}
+                            >
+                                Contact
+                            </Link>
+                        </li>
+                    </ul>
+                </Grid>
+            </Grid>
 
             <Landing />
-
-            <Projects />
-            <About />
-            <Contact />
+            <ScrollToTop />
+            <div id="projects">
+                <Projects />
+            </div>
+            <div id="about">
+                <About />
+            </div>
+            <div id="contact">
+                <Contact />
+            </div>
+            <Footer />
         </div>
     );
 }

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Grid, TextField, Typography, Button } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, withStyles } from '@material-ui/core/styles';
 import emailjs from 'emailjs-com';
 
 const useStyles = makeStyles((theme) => ({
@@ -12,11 +12,31 @@ const useStyles = makeStyles((theme) => ({
     formStyles: {
         width: '100%',
     },
+    formSpacing: {
+        marginTop: '10px',
+        marginBottom: '10px',
+    },
     contactFormText: {
         color: 'white',
     },
-    submitFormButton: {},
+    submitFormButton: {
+        color: 'black',
+    },
 }));
+
+const CssTextField = withStyles({
+    root: {
+        '& label.Mui-focused': {
+            color: 'white',
+        },
+        '& .MuiInput-underline:before': {
+            borderBottomColor: 'white',
+        },
+        '& .MuiInput-underline:after': {
+            borderBottomColor: 'white',
+        },
+    },
+})(TextField);
 
 const ContactFrom = () => {
     const classes = useStyles();
@@ -41,7 +61,6 @@ const ContactFrom = () => {
                     from_email: '',
                     message: '',
                 });
-                console.log(result);
             })
             .catch((err) => console.error(err));
     };
@@ -63,28 +82,49 @@ const ContactFrom = () => {
             </Typography>
             <form className={classes.formStyles} onSubmit={handleFormSubmit}>
                 <Grid item xs={12}>
-                    <TextField
+                    <CssTextField
                         fullWidth
                         onChange={handleInputChange}
                         value={formContent['from_name']}
                         id="from_name"
                         type="text"
                         label="Name"
-                        className={classes.contactFormText}
+                        className={classes.formSpacing}
+                        InputProps={{
+                            classes: {
+                                input: classes.contactFormText,
+                                label: classes.contactFormText,
+                            },
+                        }}
+                        InputLabelProps={{
+                            className: classes.contactFormText,
+                            focused: classes.contactFormText,
+                        }}
                     />
                 </Grid>
                 <Grid item xs={12}>
-                    <TextField
+                    <CssTextField
                         fullWidth
                         onChange={handleInputChange}
                         value={formContent['from_email']}
                         id="from_email"
                         type="email"
                         label="Email"
+                        className={classes.formSpacing}
+                        InputProps={{
+                            classes: {
+                                input: classes.contactFormText,
+                                label: classes.contactFormText,
+                            },
+                        }}
+                        InputLabelProps={{
+                            className: classes.contactFormText,
+                            focused: classes.contactFormText,
+                        }}
                     />
                 </Grid>
                 <Grid item xs={12}>
-                    <TextField
+                    <CssTextField
                         fullWidth
                         onChange={handleInputChange}
                         value={formContent['message']}
@@ -93,6 +133,17 @@ const ContactFrom = () => {
                         label="Message"
                         multiline
                         rows={4}
+                        className={classes.formSpacing}
+                        InputProps={{
+                            classes: {
+                                input: classes.contactFormText,
+                                label: classes.contactFormText,
+                            },
+                        }}
+                        InputLabelProps={{
+                            className: classes.contactFormText,
+                            focused: classes.contactFormText,
+                        }}
                     />
                 </Grid>
                 <Grid
@@ -101,7 +152,13 @@ const ContactFrom = () => {
                     justify="flex-end"
                     style={{ marginTop: '30px' }}
                 >
-                    <Button type="submit">Submit</Button>
+                    <Button
+                        variant="contained"
+                        className={classes.submitFormButton}
+                        type="submit"
+                    >
+                        Submit
+                    </Button>
                 </Grid>
             </form>
         </Grid>

@@ -3,22 +3,23 @@
     margin: 0;
     font-family: 'Titillium Web', sans-serif;
 }
+
 body {
     color: #ffffff;
     background-color: #2e2e35;
 }
 
 .section {
-    @media screen and (max-width: 600px) {
-        margin-left: 10%;
-        margin-right: 10%;
-    }
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1500px;
+    padding: 2em;
 }
 
 .navlinks {
     display: inline;
+    cursor: pointer;
+    font-size: 27px;
     @media screen and (max-width: 600px) {
         margin: 0 1em 0 0;
     }
@@ -29,5 +30,11 @@ body {
 a {
     color: white;
     text-decoration: none;
-    font-size: 27px;
+}
+
+.scroll-to-top-btn {
+    position: fixed;
+    bottom: 9%;
+    right: 5%;
+    cursor: pointer;
 }
