@@ -34,7 +34,7 @@ const Contact = () => {
                 <ul className={classes.links}>
                     <li className={classes.link}>
                         <a
-                            href="https://drive.google.com/file/d/1Kx6pDDDChIV10FZZqddV7BTv5bKLqeSH/view?usp=sharing"
+                            href="https://drive.google.com/file/d/1AqY_krtyH0yALybtadaAAdrNY1_76jpH/view?usp=sharing"
                             target="_blank"
                             rel="noreferrer"
                         >
