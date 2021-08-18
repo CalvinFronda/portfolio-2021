@@ -13,7 +13,10 @@ const useStyles = makeStyles({
     profilePic: {
         display: 'flex',
         justifyContent: 'center',
-        maxHeight: 568,
+        maxHeight: 580,
+        maxWidth: 580,
+        width: '100%',
+        height: 'auto',
         borderRadius: '50%',
     },
     topText: {
