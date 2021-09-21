@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
     },
     navList: {
         listStyleType: 'none',
-        textAlign: 'center',
+        textAlign: 'right',
     },
 }));
 
@@ -45,10 +45,11 @@ function App() {
                 <Grid item xs={1} className={classes.logo}>
                     CF.
                 </Grid>
+
                 <Grid item xs={12} md={11} className={classes.navigation}>
                     <ul className={classes.navList}>
                         <li className="navlinks">
-                            <Link
+                            {/* <Link
                                 activeClass="active"
                                 to="projects"
                                 smooth={true}
@@ -57,19 +58,16 @@ function App() {
                                 delay={100}
                             >
                                 Projects
-                            </Link>
+                            </Link> */}
                         </li>
                         <li className="navlinks">
-                            <Link
-                                activeClass="active"
-                                to="about"
-                                smooth={true}
-                                offset={50}
-                                duration={700}
-                                delay={100}
+                            <a
+                                href="https://drive.google.com/file/d/1AqY_krtyH0yALybtadaAAdrNY1_76jpH/view?usp=sharing"
+                                target="_blank"
+                                rel="noreferrer"
                             >
-                                About
-                            </Link>
+                                Resume
+                            </a>
                         </li>
                         <li className="navlinks">
                             <Link
@@ -87,11 +85,11 @@ function App() {
                 </Grid>
             </Grid>
 
-            <Landing />
+            {/* <Landing /> */}
             <ScrollToTop />
-            <div id="projects">
+            {/* <div id="projects">
                 <Projects />
-            </div>
+            </div> */}
             <div id="about">
                 <About />
             </div>

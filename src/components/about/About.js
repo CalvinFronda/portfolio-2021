@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Typography } from '@material-ui/core';
-import professionalPicture from '../../assets/images/professionalPicture.jpg';
+import professionalPicture from '../../assets/images/calvin-2021-profilepic.jpg';
 const useStyles = makeStyles({
     root: {
         paddingTop: '72px',
@@ -13,6 +13,7 @@ const useStyles = makeStyles({
     profilePic: {
         display: 'flex',
         justifyContent: 'center',
+        objectFit: 'cover',
         maxHeight: 580,
         maxWidth: 580,
         width: '100%',
@@ -20,12 +21,12 @@ const useStyles = makeStyles({
         borderRadius: '50%',
     },
     topText: {
-        fontWeight: 'bold',
+        
         fontSize: '24px',
         marginBottom: '3em',
     },
     bottomText: {
-        fontWeight: 'bold',
+        
         fontSize: '24px',
     },
 });
@@ -34,9 +35,6 @@ const About = () => {
     const classes = useStyles();
     return (
         <Grid container direction="row" spacing={4} className={classes.root}>
-            <Grid item xs={12} className={classes.heading}>
-                About me
-            </Grid>
             <Grid item xs={12} md={6}>
                 <img
                     className={classes.profilePic}
@@ -46,18 +44,18 @@ const About = () => {
             </Grid>
             <Grid item xs={12} md={6}>
                 <Typography className={classes.topText}>
-                    I am a frontend web developer with expert knowledge of
-                    React, Javascript, HTML and CSS. I love structure and
-                    following best practices when it comes to coding. I excel in
-                    team environments from my years working in retail and
-                    customer service. Currently looking for a full time position
-                    as a frontend web developer.
+                    Building products and working with users has taught me to
+                    pay attention to detail and care deeply about my work. As a
+                    result, I’m enthusiastic about building software that helps
+                    people, eager to learn how to develop more robust systems,
+                    and excited to own impactful projects.
                 </Typography>
                 <Typography className={classes.bottomText}>
-                    Things I like to do outside of coding?
-                    <br />I love the outdoors, so going on hikes, playing sports
-                    like basketball or tennis, baking some delicious bread and
-                    playing video games.
+                    On the weekends, I try to find something exciting to do
+                    outdoors, whether going mountain bike riding, playing
+                    sports, or spending some time at amusement parks. When I
+                    can’t go outside, I learn new recipes and bake (hopefully)
+                    delicious pastries.
                 </Typography>
             </Grid>
         </Grid>
