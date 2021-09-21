@@ -3,8 +3,8 @@ import './App.scss';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid } from '@material-ui/core';
 
-import Landing from './components/landing/Landing';
-import Projects from './components/projects/Projects';
+// import Landing from './components/landing/Landing';
+// import Projects from './components/projects/Projects';
 import About from './components/about/About';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
