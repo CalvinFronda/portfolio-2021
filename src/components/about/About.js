@@ -1,6 +1,9 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Typography } from '@material-ui/core';
+import Image from 'next/image'
+import { makeStyles } from '@mui/styles';
+import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
+
 import professionalPicture from '../../assets/images/calvin-2021-profilepic.jpg';
 const useStyles = makeStyles({
     root: {
@@ -21,12 +24,12 @@ const useStyles = makeStyles({
         borderRadius: '50%',
     },
     topText: {
-        
+
         fontSize: '24px',
         marginBottom: '3em',
     },
     bottomText: {
-        
+
         fontSize: '24px',
     },
 });
@@ -36,11 +39,13 @@ const About = () => {
     return (
         <Grid container direction="row" spacing={4} className={classes.root}>
             <Grid item xs={12} md={6}>
-                <img
-                    className={classes.profilePic}
+                <Image
                     src={professionalPicture}
+                    width={580}
+                    height={580}
                     alt="personal"
                 />
+
             </Grid>
             <Grid item xs={12} md={6}>
                 <Typography className={classes.topText}>

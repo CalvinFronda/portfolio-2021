@@ -1,6 +1,6 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { Grid } from '@material-ui/core';
+import makeStyles from '@mui/styles/makeStyles';
+import Grid from '@mui/material/Grid';
 import ProjectCards from './ProjectCards';
 import omouPicture from '../../assets/images/omouhomepage.png';
 import githubFinder from '../../assets/images/githubfinder.png';

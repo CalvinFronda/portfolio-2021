@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import makeStyles from '@mui/styles/makeStyles';
 import {
     Grid,
     Card,
@@ -9,7 +9,7 @@ import {
     Box,
     Typography,
     CardMedia,
-} from '@material-ui/core';
+} from '@mui/material';
 const useStyles = makeStyles({
     root: {
         minHeight: 680,

@@ -1,7 +1,8 @@
 import './App.scss';
+import Grid from '@mui/material/Grid';
 
-import { makeStyles } from '@material-ui/core/styles';
-import { Grid } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 // import Landing from './components/landing/Landing';
 // import Projects from './components/projects/Projects';
@@ -32,72 +33,81 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function App() {
-    const classes = useStyles();
+    const classes = {
+        root: {
+            display: 'flex',
+            alignItems: 'center',
+            marginTop: '72px',
+            marginBottom: '72px',
+        },
 
+
+        logo: {
+            fontSize: '35px',
+            fontWeight: 'bold',
+        },
+        navList: {
+            listStyleType: 'none',
+            textAlign: 'right',
+        },
+    }
+    const theme = createTheme()
     return (
-        <div className="section">
-            <Grid
-                container
-                direction="row"
-                alignContent="center"
-                className={classes.root}
-            >
-                <Grid item xs={1} className={classes.logo}>
-                    CF.
+        <ThemeProvider theme={theme}>
+            <div className="section">
+                <Grid
+                    container
+                    direction="row"
+                    alignContent="center"
+                    className={classes.root}
+                >
+                    <Grid item xs={1} className={classes.logo}>
+                        CF.
+                    </Grid>
+
+                    <Grid item xs={12} md={11} className={classes.navigation}>
+                        <ul className={classes.navList}>
+                            <li className="navlinks">
+                            </li>
+                            <li className="navlinks">
+                                <a
+                                    href="https://drive.google.com/file/d/1AqY_krtyH0yALybtadaAAdrNY1_76jpH/view?usp=sharing"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    Resume
+                                </a>
+                            </li>
+                            <li className="navlinks">
+                                <Link
+                                    activeClass="active"
+                                    to="contact"
+                                    smooth={true}
+                                    offset={50}
+                                    duration={900}
+                                    delay={100}
+                                >
+                                    Contact
+                                </Link>
+                            </li>
+                        </ul>
+                    </Grid>
                 </Grid>
 
-                <Grid item xs={12} md={11} className={classes.navigation}>
-                    <ul className={classes.navList}>
-                        <li className="navlinks">
-                            {/* <Link
-                                activeClass="active"
-                                to="projects"
-                                smooth={true}
-                                offset={50}
-                                duration={500}
-                                delay={100}
-                            >
-                                Projects
-                            </Link> */}
-                        </li>
-                        <li className="navlinks">
-                            <a
-                                href="https://drive.google.com/file/d/1AqY_krtyH0yALybtadaAAdrNY1_76jpH/view?usp=sharing"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                Resume
-                            </a>
-                        </li>
-                        <li className="navlinks">
-                            <Link
-                                activeClass="active"
-                                to="contact"
-                                smooth={true}
-                                offset={50}
-                                duration={900}
-                                delay={100}
-                            >
-                                Contact
-                            </Link>
-                        </li>
-                    </ul>
-                </Grid>
-            </Grid>
-
-            {/* <Landing /> */}
-            <ScrollToTop />
-            {/* <div id="projects">
+                {/* <Landing /> */}
+                <ScrollToTop />
+                {/* <div id="projects">
                 <Projects />
             </div> */}
-            <div id="about">
-                <About />
+                <div id="about">
+                    <About />
+                </div>
+                <div id="contact">
+                    <Contact />
+                </div>
+                <Footer />
             </div>
-            <div id="contact">
-                <Contact />
-            </div>
-            <Footer />
-        </div>
+        </ThemeProvider>
     );
 }
 

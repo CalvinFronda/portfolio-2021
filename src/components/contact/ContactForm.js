@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
-import { Grid, TextField, Typography, Button } from '@material-ui/core';
-import { makeStyles, withStyles } from '@material-ui/core/styles';
+import  Grid from '@mui/material/Grid';
+import TextField from '@mui/material/TextField';
+import Typography  from '@mui/material/Typography';
+import Button  from '@mui/material/Button';
+import { makeStyles } from '@mui/styles';
+import { withStyles } from "@mui/styles";
 import emailjs from 'emailjs-com';
 
 const useStyles = makeStyles((theme) => ({
@@ -74,7 +78,7 @@ const ContactFrom = () => {
     };
 
     return (
-        <Grid container direction="row" spacing={4} className={classes.root}>
+        (<Grid container direction="row" spacing={4} className={classes.root}>
             <Typography className={classes.contactFormText}>
                 If you want to chat about some of my work or if you have a
                 project that you think I would be interested in, send me a
@@ -149,7 +153,7 @@ const ContactFrom = () => {
                 <Grid
                     item
                     container
-                    justify="flex-end"
+                    justifyContent="flex-end"
                     style={{ marginTop: '30px' }}
                 >
                     <Button
@@ -161,7 +165,7 @@ const ContactFrom = () => {
                     </Button>
                 </Grid>
             </form>
-        </Grid>
+        </Grid>)
     );
 };
 
