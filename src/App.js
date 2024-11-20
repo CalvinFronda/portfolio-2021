@@ -1,104 +1,96 @@
-import './App.scss';
-
-import { makeStyles } from '@material-ui/core/styles';
-import { Grid } from '@material-ui/core';
-
+import "./App.scss";
+import { styled } from "@mui/material/styles";
+import Grid from "@mui/material/Grid2";
 // import Landing from './components/landing/Landing';
 // import Projects from './components/projects/Projects';
-import About from './components/about/About';
-import Contact from './components/contact/Contact';
-import Footer from './components/footer/Footer';
-import { Link } from 'react-scroll';
-import ScrollToTop from './components/ScrollToTop';
-const useStyles = makeStyles((theme) => ({
-    root: {
-        display: 'flex',
-        alignItems: 'center',
-        marginTop: '72px',
-        marginBottom: '72px',
-    },
-    menuButton: {
-        marginRight: theme.spacing(1),
-    },
+import About from "./components/about/About";
+import Contact from "./components/contact/Contact";
+import Footer from "./components/footer/Footer";
+import { Link } from "react-scroll";
+import ScrollToTop from "./components/ScrollToTop";
+const PREFIX = "App";
 
-    logo: {
-        fontSize: '35px',
-        fontWeight: 'bold',
-    },
-    navList: {
-        listStyleType: 'none',
-        textAlign: 'right',
-    },
+const classes = {
+  root: `${PREFIX}-root`,
+  menuButton: `${PREFIX}-menuButton`,
+  logo: `${PREFIX}-logo`,
+  navList: `${PREFIX}-navList`,
+};
+
+const Root = styled("div")(({ theme }) => ({
+  [`& .${classes.root}`]: {
+    display: "flex",
+    alignItems: "center",
+    marginTop: "72px",
+    marginBottom: "72px",
+  },
+
+  [`& .${classes.menuButton}`]: {
+    marginRight: theme.spacing(1),
+  },
+
+  [`& .${classes.logo}`]: {
+    fontSize: "35px",
+    fontWeight: "bold",
+  },
+
+  [`& .${classes.navList}`]: {
+    listStyleType: "none",
+    textAlign: "right",
+  },
 }));
 
 function App() {
-    const classes = useStyles();
+  return (
+    <Root className="section">
+      <Grid
+        container
+        direction="row"
+        alignContent="center"
+        className={classes.root}
+      >
+        <Grid size={{ xs: 1 }} className={classes.logo}>
+          CF.
+        </Grid>
 
-    return (
-        <div className="section">
-            <Grid
-                container
-                direction="row"
-                alignContent="center"
-                className={classes.root}
-            >
-                <Grid item xs={1} className={classes.logo}>
-                    CF.
-                </Grid>
+        <Grid size={{ xs: 12, md: 11 }} className={classes.navigation}>
+          <ul className={classes.navList}>
+            <li className="navlinks">
+              <a
+                href="https://drive.google.com/file/d/1AqY_krtyH0yALybtadaAAdrNY1_76jpH/view?usp=sharing"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Resume
+              </a>
+            </li>
+            <li className="navlinks">
+              <Link
+                activeClass="active"
+                to="contact"
+                smooth={true}
+                offset={50}
+                duration={900}
+                delay={100}
+              >
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </Grid>
+      </Grid>
 
-                <Grid item xs={12} md={11} className={classes.navigation}>
-                    <ul className={classes.navList}>
-                        <li className="navlinks">
-                            {/* <Link
-                                activeClass="active"
-                                to="projects"
-                                smooth={true}
-                                offset={50}
-                                duration={500}
-                                delay={100}
-                            >
-                                Projects
-                            </Link> */}
-                        </li>
-                        <li className="navlinks">
-                            <a
-                                href="https://drive.google.com/file/d/1AqY_krtyH0yALybtadaAAdrNY1_76jpH/view?usp=sharing"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                Resume
-                            </a>
-                        </li>
-                        <li className="navlinks">
-                            <Link
-                                activeClass="active"
-                                to="contact"
-                                smooth={true}
-                                offset={50}
-                                duration={900}
-                                delay={100}
-                            >
-                                Contact
-                            </Link>
-                        </li>
-                    </ul>
-                </Grid>
-            </Grid>
+      <ScrollToTop />
 
-            {/* <Landing /> */}
-            <ScrollToTop />
-            {/* <div id="projects">
-                <Projects />
-            </div> */}
-            <div id="about">
-                <About />
-            </div>
-            <div id="contact">
-                <Contact />
-            </div>
-            <Footer />
-        </div>
-    );
+      <div id="about">
+        <About />
+      </div>
+      <div id="contact">
+        <Contact />
+      </div>
+      <Footer />
+    </Root>
+  );
 }
 
 export default App;

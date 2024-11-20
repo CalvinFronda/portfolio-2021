@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { animateScroll as scroll } from 'react-scroll';
-import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 const ScrollToTop = () => {
     const [showScrollToTop, setShowScrollToTop] = useState(false);
     const handleScroll = () => {
