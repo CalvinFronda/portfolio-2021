@@ -1,5 +1,5 @@
-import React from "react";
-import { styled } from "@mui/material/styles";
+import React from 'react';
+import { styled } from '@mui/material/styles';
 import {
   Card,
   CardActions,
@@ -8,9 +8,9 @@ import {
   Box,
   Typography,
   CardMedia,
-} from "@mui/material";
-import Grid from "@mui/material/Grid2";
-const PREFIX = "ProjectCards";
+} from '@mui/material';
+import Grid from '@mui/material/Grid2';
+const PREFIX = 'ProjectCards';
 
 const classes = {
   root: `${PREFIX}-root`,
@@ -24,30 +24,30 @@ const classes = {
 const StyledGrid = styled(Grid)({
   [`& .${classes.root}`]: {
     minHeight: 680,
-    backgroundColor: "#C4C4C4",
+    backgroundColor: '#C4C4C4',
   },
 
   [`& .${classes.title}`]: {
     fontSize: 42,
-    textAlign: "center",
+    textAlign: 'center',
   },
   [`& .${classes.pos}`]: {
     marginBottom: 12,
   },
   [`& .${classes.cardActions}`]: {
-    display: "flex",
-    justifyContent: "center",
+    display: 'flex',
+    justifyContent: 'center',
   },
 
   [`& .${classes.projectImage}`]: {
-    height: "265px",
+    height: '265px',
   },
 
   [`& .${classes.btnStyle}`]: {
-    backgroundColor: "#545050",
-    borderRadius: "20px",
-    fontSize: "18px",
-    padding: "9px",
+    backgroundColor: '#545050',
+    borderRadius: '20px',
+    fontSize: '18px',
+    padding: '9px',
   },
 });
 
@@ -74,11 +74,11 @@ const ProjectCards = ({
           />
           <br />
           <Typography variant="h6">Technologies used</Typography>
-          <Typography> {techUsed.join(", ")}</Typography>
+          <Typography> {techUsed.join(', ')}</Typography>
           <Box p={3}>
             <ul>
               {description.map((content) => (
-                <li style={{ paddingBottom: "7px" }}>
+                <li style={{ paddingBottom: '7px' }}>
                   <Typography variant="body1">{content}</Typography>
                 </li>
               ))}
