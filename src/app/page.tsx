@@ -1,13 +1,14 @@
-import './App.scss';
+'use client';
+import '../App.scss';
+import React from 'react';
 import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Grid2';
-// import Landing from './components/landing/Landing';
-// import Projects from './components/projects/Projects';
-import About from './components/about/About';
-import Contact from './components/contact/Contact';
-import Footer from './components/footer/Footer';
+
+import About from '../components/about/About';
+import Contact from '../components/contact/Contact';
+import Footer from '../components/footer/Footer';
 import { Link } from 'react-scroll';
-import ScrollToTop from './components/ScrollToTop';
+
 const PREFIX = 'App';
 
 const classes = {
@@ -40,7 +41,7 @@ const Root = styled('div')(({ theme }) => ({
   },
 }));
 
-function App() {
+function Page() {
   return (
     <Root className="section">
       <Grid
@@ -53,7 +54,7 @@ function App() {
           CF.
         </Grid>
 
-        <Grid size={{ xs: 12, md: 11 }} className={classes.navigation}>
+        <Grid size={{ xs: 12, md: 11 }}>
           <ul className={classes.navList}>
             <li className="navlinks">
               <a
@@ -80,8 +81,6 @@ function App() {
         </Grid>
       </Grid>
 
-      <ScrollToTop />
-
       <div id="about">
         <About />
       </div>
@@ -93,4 +92,4 @@ function App() {
   );
 }
 
-export default App;
+export default Page;

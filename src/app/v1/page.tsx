@@ -1,13 +1,14 @@
-import './App.scss';
+'use client';
+import '../../App.scss';
 import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Grid2';
 // import Landing from './components/landing/Landing';
 // import Projects from './components/projects/Projects';
-import About from './components/about/About';
-import Contact from './components/contact/Contact';
-import Footer from './components/footer/Footer';
+import About from './About';
+import Contact from './Contact';
+import Footer from './Footer';
 import { Link } from 'react-scroll';
-import ScrollToTop from './components/ScrollToTop';
+import ScrollToTop from '../../components/ScrollToTop/scrollToTop';
 const PREFIX = 'App';
 
 const classes = {
@@ -53,7 +54,7 @@ function App() {
           CF.
         </Grid>
 
-        <Grid size={{ xs: 12, md: 11 }} className={classes.navigation}>
+        <Grid size={{ xs: 12, md: 11 }}>
           <ul className={classes.navList}>
             <li className="navlinks">
               <a

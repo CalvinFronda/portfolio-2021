@@ -1,40 +1,40 @@
 * {
-    padding: 0;
-    margin: 0;
-    font-family: 'Titillium Web', sans-serif;
+  padding: 0;
+  margin: 0;
+  font-family: 'Titillium Web', sans-serif;
 }
 
 #root {
-    color: #ffffff;
-    background-color: #2e2e35;
+  color: #ffffff;
+  background-color: #2e2e35;
 }
 
 .section {
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 1500px;
-    padding: 2em;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1500px;
+  padding: 2em;
 }
 
 .navlinks {
-    display: inline;
-    cursor: pointer;
-    font-size: 27px;
-    @media screen and (max-width: 600px) {
-        margin: 0 1em 0 0;
-    }
+  display: inline;
+  cursor: pointer;
+  font-size: 27px;
+  @media screen and (max-width: 600px) {
+    margin: 0 1em 0 0;
+  }
 
-    margin: 0 4em 0 0;
+  margin: 0 4em 0 0;
 }
 
 a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 .scroll-to-top-btn {
-    position: fixed;
-    bottom: 9%;
-    right: 5%;
-    cursor: pointer;
+  position: fixed;
+  bottom: 9%;
+  right: 5%;
+  cursor: pointer;
 }

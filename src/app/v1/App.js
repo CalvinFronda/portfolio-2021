@@ -1,8 +1,7 @@
 import './App.scss';
 import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Grid2';
-// import Landing from './components/landing/Landing';
-// import Projects from './components/projects/Projects';
+
 import About from './components/about/About';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
