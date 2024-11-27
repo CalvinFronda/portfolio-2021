@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import React from 'react';
-import '../index.scss';
+
 export const metadata: Metadata = {
   title: 'React App',
   description: 'Web site created with Next.js.',
