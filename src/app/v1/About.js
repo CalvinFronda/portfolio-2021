@@ -1,12 +1,13 @@
-import React from "react";
-import { styled } from "@mui/material/styles";
-import Image from "next/image";
+'use client';
+import React from 'react';
+import { styled } from '@mui/material/styles';
+import Image from 'next/image';
 
-import Grid from "@mui/material/Grid2";
-import Typography from "@mui/material/Typography";
+import Grid from '@mui/material/Grid2';
+import Typography from '@mui/material/Typography';
 
-import professionalPicture from "../../assets/images/calvin-2021-profilepic.jpg";
-const PREFIX = "About";
+import professionalPicture from '../../assets/images/calvin-2021-profilepic.jpg';
+const PREFIX = 'About';
 
 const classes = {
   root: `${PREFIX}-root`,
@@ -18,28 +19,28 @@ const classes = {
 
 const StyledGrid = styled(Grid)({
   [`&.${classes.root}`]: {
-    paddingTop: "72px",
-    paddingBottom: "72px",
+    paddingTop: '72px',
+    paddingBottom: '72px',
   },
   [`& .${classes.heading}`]: {
-    fontSize: "42px",
+    fontSize: '42px',
   },
   [`& .${classes.profilePic}`]: {
-    display: "flex",
-    justifyContent: "center",
-    objectFit: "cover",
+    display: 'flex',
+    justifyContent: 'center',
+    objectFit: 'cover',
     maxHeight: 580,
     maxWidth: 580,
-    width: "100%",
-    height: "auto",
-    borderRadius: "50%",
+    width: '100%',
+    height: 'auto',
+    borderRadius: '50%',
   },
   [`& .${classes.topText}`]: {
-    fontSize: "24px",
-    marginBottom: "3em",
+    fontSize: '24px',
+    marginBottom: '3em',
   },
   [`& .${classes.bottomText}`]: {
-    fontSize: "24px",
+    fontSize: '24px',
   },
 });
 

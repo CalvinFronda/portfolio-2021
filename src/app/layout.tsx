@@ -1,23 +1,21 @@
 import type { Metadata } from 'next';
-import React from "react";
-import '../index.scss';
-export const metadata: Metadata = {
-    title: 'React App',
-    description: 'Web site created with Next.js.',
-}
+import React from 'react';
 
+export const metadata: Metadata = {
+  title: 'Calvin Fronda',
+  description: `Calvin Fronda's Personal Portfolio website.`,
+};
 
 export default function RootLayout({
-    children,
+  children,
 }: {
-    children: React.ReactNode
+  children: React.ReactNode;
 }) {
-    return (
-        <html lang="en">
-            <body>
-                <div id="root">{children}</div>
-            </body>
-        </html>
-
-    );
+  return (
+    <html lang="en">
+      <body>
+        <div id="root">{children}</div>
+      </body>
+    </html>
+  );
 }

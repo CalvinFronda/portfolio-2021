@@ -1,14 +1,13 @@
-import "./App.scss";
-import { styled } from "@mui/material/styles";
-import Grid from "@mui/material/Grid2";
-// import Landing from './components/landing/Landing';
-// import Projects from './components/projects/Projects';
-import About from "./components/about/About";
-import Contact from "./components/contact/Contact";
-import Footer from "./components/footer/Footer";
-import { Link } from "react-scroll";
-import ScrollToTop from "./components/ScrollToTop";
-const PREFIX = "App";
+import './App.scss';
+import { styled } from '@mui/material/styles';
+import Grid from '@mui/material/Grid2';
+
+import About from './components/about/About';
+import Contact from './components/contact/Contact';
+import Footer from './components/footer/Footer';
+import { Link } from 'react-scroll';
+import ScrollToTop from './components/ScrollToTop';
+const PREFIX = 'App';
 
 const classes = {
   root: `${PREFIX}-root`,
@@ -17,12 +16,12 @@ const classes = {
   navList: `${PREFIX}-navList`,
 };
 
-const Root = styled("div")(({ theme }) => ({
+const Root = styled('div')(({ theme }) => ({
   [`& .${classes.root}`]: {
-    display: "flex",
-    alignItems: "center",
-    marginTop: "72px",
-    marginBottom: "72px",
+    display: 'flex',
+    alignItems: 'center',
+    marginTop: '72px',
+    marginBottom: '72px',
   },
 
   [`& .${classes.menuButton}`]: {
@@ -30,13 +29,13 @@ const Root = styled("div")(({ theme }) => ({
   },
 
   [`& .${classes.logo}`]: {
-    fontSize: "35px",
-    fontWeight: "bold",
+    fontSize: '35px',
+    fontWeight: 'bold',
   },
 
   [`& .${classes.navList}`]: {
-    listStyleType: "none",
-    textAlign: "right",
+    listStyleType: 'none',
+    textAlign: 'right',
   },
 }));
 

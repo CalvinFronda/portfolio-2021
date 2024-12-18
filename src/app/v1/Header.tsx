@@ -1,9 +1,9 @@
-import React from "react";
-import Grid from "@mui/material/Grid2";
-import { Link } from "react-scroll";
+import React from 'react';
+import Grid from '@mui/material/Grid2';
+import { Link } from 'react-scroll';
 
 const Header = () => {
-  const test = "";
+  const test = '';
 
   return (
     <div className="section">

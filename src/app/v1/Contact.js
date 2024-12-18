@@ -1,39 +1,38 @@
-import React from "react";
+'use client';
+import React from 'react';
 import { styled } from '@mui/material/styles';
-import Grid from "@mui/material/Grid2";
+import Grid from '@mui/material/Grid2';
 
-import ContactFrom from "./ContactForm";
+import ContactFrom from './ContactForm';
 const PREFIX = 'Contact';
 
 const classes = {
   root: `${PREFIX}-root`,
   heading: `${PREFIX}-heading`,
   links: `${PREFIX}-links`,
-  link: `${PREFIX}-link`
+  link: `${PREFIX}-link`,
 };
 
 const StyledGrid = styled(Grid)({
   [`&.${classes.root}`]: {
-    marginTop: "72px",
-    marginBottom: "72px",
+    marginTop: '72px',
+    marginBottom: '72px',
   },
   [`& .${classes.heading}`]: {
-    fontSize: "42px",
+    fontSize: '42px',
   },
   [`& .${classes.links}`]: {
-    listStyleType: "none",
+    listStyleType: 'none',
   },
   [`& .${classes.link}`]: {
-    marginBottom: "5em",
-    fontSize: "27px",
+    marginBottom: '5em',
+    fontSize: '27px',
   },
 });
 
 const Contact = () => {
-
-
   return (
-    (<StyledGrid container direction="row" spacing={4} className={classes.root}>
+    <StyledGrid container direction="row" spacing={4} className={classes.root}>
       <Grid size={{ xs: 12 }} className={classes.heading}>
         Get in touch
       </Grid>
@@ -71,7 +70,7 @@ const Contact = () => {
           </li>
         </ul>
       </Grid>
-    </StyledGrid>)
+    </StyledGrid>
   );
 };
 
