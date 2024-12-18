@@ -1,24 +1,25 @@
-import './App.scss';
+import './styles.scss';
 import React from 'react';
 import Header from './Header';
-import { createTheme, ThemeProvider } from '@mui/system';
-import { Box } from '@mui/material';
 
 import Content from './Content';
 
 const Main = () => {
   return (
-    <Box
-      className="main-content__container"
-      sx={{
-        flexDirection: { xs: 'column', sm: 'row' },
-      }}
-    >
-      <div className="main-content__content ">
-        <Header />
-        <Content />
+    <div className="container">
+      <div className="content__container">
+        <div className="main_content__container">
+          <Header />
+          <Content />
+        </div>
+        <footer className="flex flex-aic flex-jcc">
+          <p className="cf_copyright">
+            Made with ❤️ by Calvin using Next.js, React, scss. Deployed on
+            Netlify
+          </p>
+        </footer>
       </div>
-    </Box>
+    </div>
   );
 };
 

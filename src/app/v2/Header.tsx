@@ -1,52 +1,69 @@
 import React from 'react';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
+
 import Link from '@mui/material/Link';
-import { GitHub, LinkedIn, Twitter } from '@mui/icons-material';
+import IconButton from '@mui/material/IconButton';
+import GitHub from '@mui/icons-material/GitHub';
+import LinkedIn from '@mui/icons-material/LinkedIn';
+import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
+import { Tooltip } from '@mui/material';
+
+const LocalIconButton = ({ children, tooltip }) => (
+  <Tooltip title={tooltip || ''}>
+    <IconButton
+      sx={{
+        ':hover': {
+          bgcolor: '#1B263B', // theme.palette.primary.main
+          color: '#0D1B2A',
+        },
+      }}
+    >
+      {children}
+    </IconButton>
+  </Tooltip>
+);
 
 const Header = () => {
   const routes = ['About', 'Experince'];
 
   return (
     <header className="main-content__left-pane__container">
-      <Box className="main-content__left-pane">
-        <Box>
-          <Typography variant="h2" component="h1" gutterBottom>
-            Calvin Fronda
-          </Typography>
-          <Typography variant="h4" gutterBottom>
-            Front-end Developer
-          </Typography>
+      <div>
+        <h1>Calvin Fronda</h1>
+        <h2>Software Engineer</h2>
+        <p>I like to code </p>
 
-          <Typography variant="body1" gutterBottom>
-            I like the build websites and apps that make people go crazy. Look
-            at this cool ass website
-          </Typography>
-        </Box>
-        <Box>
+        <div className="social-links">
           <Link
-            href="https://github.com/your-github-username"
+            href="https://github.com/CalvinFronda"
             target="_blank"
             rel="noopener"
           >
-            <GitHub fontSize="large" />
+            <LocalIconButton tooltip="Github">
+              <GitHub fontSize="large" sx={{ color: '#E0E1DD' }} />
+            </LocalIconButton>
           </Link>
+
           <Link
-            href="https://www.linkedin.com/in/your-linkedin-username"
+            href="https://www.linkedin.com/in/calvinfronda/"
             target="_blank"
             rel="noopener"
           >
-            <LinkedIn fontSize="large" />
+            <LocalIconButton tooltip="LinkedIn">
+              <LinkedIn fontSize="large" sx={{ color: '#E0E1DD' }} />
+            </LocalIconButton>
           </Link>
+
           <Link
-            href="https://twitter.com/your-twitter-username"
+            href="https://drive.google.com/file/d/1AqY_krtyH0yALybtadaAAdrNY1_76jpH/view"
             target="_blank"
             rel="noopener"
           >
-            <Twitter fontSize="large" />
+            <LocalIconButton tooltip="Resume">
+              <AssignmentIndIcon fontSize="large" sx={{ color: '#E0E1DD' }} />
+            </LocalIconButton>
           </Link>
-        </Box>
-      </Box>
+        </div>
+      </div>
     </header>
   );
 };
