@@ -25,7 +25,7 @@ function ChipList({ tags }: TagsType) {
               className="experience-item__chips"
               key={i}
               label={tag}
-              color="primary"
+              sx={{ backgroundColor: '#415a77', color: '#E0E1DD' }}
             />
           ))}
         </Stack>
@@ -49,7 +49,7 @@ function ChipList({ tags }: TagsType) {
                       className="experience-item__chips"
                       key={i}
                       label={tag}
-                      color="secondary"
+                      sx={{ backgroundColor: '#415a77', color: '#E0E1DD' }}
                     />
                   ))}
                 </Stack>
