@@ -19,7 +19,7 @@ export const experience = [
         'Recharts',
         'MUI',
         'Storybook',
-        'css',
+        'less',
       ],
       Backend: ['Python', 'PonyORM', 'Relay', 'GraphQL', 'SQL', 'Strawberry'],
       DevOps: [

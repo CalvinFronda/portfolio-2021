@@ -163,29 +163,27 @@ html {
   border: 1px solid transparent;
   border-radius: 5px;
   transition: all 0.7s ease;
+
+  &:hover {
+    background-image: radial-gradient(
+      rgba(101, 112, 123, 0.131),
+      rgba(209, 196, 196, 0.14)
+    );
+
+    .short-cut__on_hover {
+      visibility: visible;
+    }
+  }
 }
 
-.experience-item__container:hover {
-  // background-color: #778da9;
-
-  background-image: radial-gradient(
-    rgba(101, 112, 123, 0.131),
-    rgba(209, 196, 196, 0.14)
-  );
-
-  .short-cut__on_hover {
-    display: block;
-  }
+.short-cut__on_hover {
+  visibility: hidden;
 }
 
 .experience-item__box {
   text-decoration: none;
   color: inherit;
   display: block;
-}
-
-.short-cut__on_hover {
-  display: none;
 }
 
 .cf_copyright {
