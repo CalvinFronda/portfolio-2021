@@ -1,14 +1,14 @@
 'use client';
-import '../../App.scss';
+import './App.scss';
 import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Grid2';
-// import Landing from './components/landing/Landing';
-// import Projects from './components/projects/Projects';
+
 import About from './About';
 import Contact from './Contact';
 import Footer from './Footer';
 import { Link } from 'react-scroll';
-import ScrollToTop from '../../components/ScrollToTop/scrollToTop';
+import ScrollToTop from '../shared/ScrollToTop';
+
 const PREFIX = 'App';
 
 const classes = {
