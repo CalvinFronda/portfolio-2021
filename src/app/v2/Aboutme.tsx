@@ -5,12 +5,13 @@ const AboutMe = () => {
     <section id="aboutme" className="main-content-sections">
       <div>
         <p>
-          I’m enthusiastic about building software that helps people, eager to
-          learn how to develop more robust systems, and excited to own and drive
-          impactful projects. I care deeply about my work and building products
-          while working directly with end users has taught me the importance of
-          paying attention to the needs of the client. I focus on the details to
-          help ensure we're solving the right problems in the right ways
+          I care about creating software that lasts—tools that are not only
+          reliable but truly make a difference. My experience working closely
+          with end users has taught me the value of listening, understanding and
+          focusing on the problems that really matter. I’m always curious about
+          emerging technologies and love exploring new tools and ideas,
+          approaching every challenge with an open mind and a drive to find the
+          best possible solutions
         </p>
       </div>
     </section>
