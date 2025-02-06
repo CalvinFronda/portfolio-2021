@@ -5,9 +5,16 @@ export const experience = [
   {
     title: 'WorkStep',
     description: [
-      `Leverages the OpenAI API to build a sentiment analysis feature which identifies themes among user provided comment text giving managers high level insight on the health of their workforce on a weekly cadence.`,
-      `Led the Frontend Working Group aligning engineering and product design workflows, resulting in a 20% faster feature delivery pipeline. Drove adoption of TypeScript and built core reusable design system components leveraged by all engineering and product teams`,
-      `Design and implement a comprehensive reporting feature by moving all client side calculations from legacy react/redux frontend to python backend using GraphQL, which improve API load times by over 30%`,
+      `Leveraged generative AI and OpenAI’s large language models for user sentiment classification and
+analysis, allowing the managers on our product to gain deep, real-time insights into the health of their
+team and workforce.`,
+      `Drove organization-wide architectural and infrastructure decisions across engineering and product; by
+spearheading TypeScript adoption and building reusable design systems and core components, we were
+able to streamline development and increase feature delivery speed by >20%.`,
+      `Optimized our TTI and page load speeds by >30% through a re-architecting and refactoring of our user-
+facing product, moving numerous compute-heavy operations from our legacy React/Redux frontend into
+
+a new Python backend interfaced via GraphQL.`,
     ],
     role: 'Software Engineer',
     tags: {
@@ -35,7 +42,7 @@ export const experience = [
       ],
       Basic: ['React', 'Typescript', 'Python', 'SQL', 'GraphQL', 'Redux'],
     },
-    dates: ['12/2021'],
+    dates: ['12/2021', '11/2024'],
     image: workStep,
     link: 'https://www.workstep.com/',
   },
